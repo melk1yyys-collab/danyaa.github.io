@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0b0b">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'none'; font-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="description" content="Контакты danya. Discord, Telegram, VK и Steam на одной странице.">
+  <title>danya / Контакты</title>
+  <link rel="icon" href="./assets/favicon.png" type="image/png">
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./config.js"></script>
+  <script defer src="./app.js"></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">К содержимому</a>
+  <div class="backdrop" aria-hidden="true"></div>
+  <header class="header wrap">
+    <a class="brand" href="#top" aria-label="На начало страницы">
+      <img class="brand-mark" src="./assets/emblem-light.png" width="568" height="418" alt="">
+      <span data-display-name>danya</span><span class="brand-note">личная страница</span>
+    </a>
+    <nav aria-label="Навигация"><a class="top-contacts" href="#contacts"><span>Контакты</span><svg class="arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6H18V18M6 18L18 6"/></svg></a></nav>
+  </header>
+  <main id="main" class="wrap">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="label-line"></span>Личные контакты</p>
+        <h1 id="hero-title" data-display-name>danya</h1>
+        <div class="hero-bottom">
+          <div><p class="hero-lead">Просто напиши.</p><p class="hero-description">Выбери удобное приложение.<br>Все мои профили ниже.</p></div>
+          <a class="primary" href="#contacts"><span>Найти меня</span><svg class="arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4V20M4 12L12 20L20 12"/></svg></a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg class="speed-lines" viewBox="0 0 600 420" fill="none"><path d="M20 308L580 188M0 354L600 226M80 382L540 284"/></svg>
+        <img class="hero-emblem" src="./assets/emblem-light.png" width="568" height="418" alt="">
+        <span class="art-caption">Discord / Telegram / VK / Steam</span>
+      </div>
+    </section>
+    <section class="contacts" id="contacts" aria-labelledby="contacts-title">
+      <div class="section-heading"><div><p class="eyebrow">Контакты</p><h2 id="contacts-title">Где меня найти</h2></div><p>Ник в Discord можно скопировать.<br>Остальные кнопки ведут к профилям.</p></div>
+      <div class="contact-grid">
+        <article class="contact-card" data-contact="discord"><div class="card-top"><span class="platform-icon" aria-hidden="true"><img src="./icons/discord.svg" width="28" height="28" alt=""></span><h3>Discord</h3><span class="card-type">ник</span></div><p class="contact-value">Контакт загружается</p><span class="contact-action" aria-disabled="true">Контакт не указан</span></article>
+        <article class="contact-card" data-contact="telegram"><div class="card-top"><span class="platform-icon" aria-hidden="true"><img src="./icons/telegram.svg" width="28" height="28" alt=""></span><h3>Telegram</h3><span class="card-type">профиль</span></div><p class="contact-value">Контакт загружается</p><span class="contact-action" aria-disabled="true">Контакт не указан</span></article>
+        <article class="contact-card" data-contact="vk"><div class="card-top"><span class="platform-icon" aria-hidden="true"><img src="./icons/vk.svg" width="28" height="28" alt=""></span><h3>VK</h3><span class="card-type">профиль</span></div><p class="contact-value">Контакт загружается</p><span class="contact-action" aria-disabled="true">Контакт не указан</span></article>
+        <article class="contact-card" data-contact="steam"><div class="card-top"><span class="platform-icon" aria-hidden="true"><img src="./icons/steam.svg" width="28" height="28" alt=""></span><h3>Steam</h3><span class="card-type">профиль</span></div><p class="contact-value">Контакт загружается</p><span class="contact-action" aria-disabled="true">Контакт не указан</span></article>
+      </div>
+      <p class="contact-note" role="status" aria-live="polite">Контакты загружаются.</p>
+      <div id="manual-copy" class="manual-copy" hidden>
+        <label for="discord-nickname">Ник Discord для копирования</label>
+        <input id="discord-nickname" readonly spellcheck="false" aria-describedby="copy-help">
+        <p id="copy-help">Ник выделен. Нажми Ctrl+C или удерживай поле и выбери «Копировать».</p>
+        <button id="close-copy" type="button">Закрыть</button>
+      </div>
+    </section>
+  </main>
+  <footer class="footer wrap"><span><span data-display-name>danya</span> / личная страница</span><a href="#top">Наверх <svg class="arrow-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20V4M4 12L12 4L20 12"/></svg></a></footer>
+  <noscript><p class="wrap noscript-note">Для загрузки контактов включи JavaScript.</p></noscript>
+</body>
+</html>
